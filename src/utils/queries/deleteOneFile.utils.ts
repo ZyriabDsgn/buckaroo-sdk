@@ -1,10 +1,10 @@
-import checkFetch from '../../checkFetch.utils';
-import { getDownloadUrlQuery } from '../../../helpers/gqlQueries.helper';
-import { TokenizedFileInput } from '../../../../definitions/custom';
+import checkFetch from '../checkFetch.utils';
+import { deleteOneFileQuery } from '../helpers/gqlQueries.helper';
+import { TokenizedFileInput } from '../../definitions/custom';
 
-export default async function getDownloadUrl(args: TokenizedFileInput) {
+export default async function deleteOneFile(args: TokenizedFileInput) {
   try {
-    const query = { ...getDownloadUrlQuery };
+    const query = { ...deleteOneFileQuery };
     query.variables.fileName = args.fileName;
     query.variables.path = args.path;
     query.variables.root = args.root;
@@ -23,13 +23,13 @@ export default async function getDownloadUrl(args: TokenizedFileInput) {
     checkFetch(res);
 
     const resData = await res.json();
-    const typename = resData.data.getDownloadUrl.__typename;
+    const typename = resData.data.deleteOneFile.__typename;
 
-    if (typename === 'SignedUrl') {
-      return resData.data.getDownloadUrl.url as string;
+    if (typename === 'FileName') {
+      return resData.data.deleteOneFile.name as string | undefined;
     }
 
-    throw new Error(resData.data.getDownloadUrl.message);
+    throw new Error(resData.data.deleteOneFile.message);
   } catch (e) {
     throw e;
   }

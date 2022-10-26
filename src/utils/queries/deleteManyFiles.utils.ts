@@ -1,5 +1,5 @@
-import checkFetch from '../../checkFetch.utils';
-import { deleteManyFilesQuery } from '../../../helpers/gqlQueries.helper';
+import checkFetch from '../checkFetch.utils';
+import { deleteManyFilesQuery } from '../helpers/gqlQueries.helper';
 
 interface DeleteManyFilesArgs {
   token: string;

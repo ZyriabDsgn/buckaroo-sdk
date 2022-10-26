@@ -1,7 +1,7 @@
-import { deleteOneFile, deleteDirectory } from './queries.utils';
-import isDirectory from '../fileExplorer/isDirectory.utils';
-import { TokenizedFileInput } from '../../../definitions/custom';
-import formatPath from '../fileExplorer/formatPath.utils';
+import { deleteOneFile, deleteDirectory } from './utils/queries.utils';
+import isDirectory from './utils/isDirectory.utils';
+import formatPath from './utils/formatPath.utils';
+import { TokenizedFileInput } from './definitions/custom';
 
 export default async function deleteObject(args: TokenizedFileInput) {
   try {

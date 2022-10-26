@@ -1,6 +1,6 @@
-import checkFetch from '../../checkFetch.utils';
-import { deleteDirectoryQuery } from '../../../helpers/gqlQueries.helper';
-import { Directory } from '../../../../definitions/graphql';
+import checkFetch from '../checkFetch.utils';
+import { deleteDirectoryQuery } from '../helpers/gqlQueries.helper';
+import { Directory } from '../../definitions/custom';
 
 interface DeleteDirectoryArgs {
   token: string;

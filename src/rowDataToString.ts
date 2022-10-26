@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { RowData } from '../../../definitions/custom';
+import { RowData } from './definitions/custom';
 
 export default function rowDataToString(args: RowData[]) {
   try {

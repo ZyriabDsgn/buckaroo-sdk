@@ -1,10 +1,10 @@
-import checkFetch from '../../checkFetch.utils';
-import { getTextFileContentQuery } from '../../../helpers/gqlQueries.helper';
-import { TokenizedFileInput } from '../../../../definitions/custom';
+import checkFetch from '../checkFetch.utils';
+import { restoreFileVersionQuery } from '../helpers/gqlQueries.helper';
+import { TokenizedFileInput } from '../../definitions/custom';
 
-export default async function getTextFileContent(args: TokenizedFileInput) {
+export default async function restoreFileVersion(args: TokenizedFileInput) {
   try {
-    const query = { ...getTextFileContentQuery };
+    const query = { ...restoreFileVersionQuery };
     query.variables.fileName = args.fileName;
     query.variables.path = args.path;
     query.variables.root = args.root;
@@ -23,13 +23,13 @@ export default async function getTextFileContent(args: TokenizedFileInput) {
     checkFetch(res);
 
     const resData = await res.json();
-    const typename = resData.data.getTextFileContent.__typename;
+    const typename = resData.data.restoreFileVersion.__typename;
 
-    if (typename === 'TextFileContent') {
-      return resData.data.getTextFileContent.content as string;
+    if (typename === 'VersionId') {
+      return resData.data.restoreFileVersion.id as string | undefined;
     }
 
-    throw new Error('resData.data.getTextFileContent.message');
+    throw new Error(resData.data.restoreFileVersion.message);
   } catch (e) {
     throw e;
   }

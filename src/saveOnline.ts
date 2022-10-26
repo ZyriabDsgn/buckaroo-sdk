@@ -1,10 +1,10 @@
-import getDataType from '../getDataType.utils';
-import checkFetch from '../checkFetch.utils';
-import { getUploadUrl } from './queries.utils';
+import checkFetch from './utils/checkFetch.utils';
+import { getUploadUrl } from './utils/queries.utils';
 
 interface SaveOnlineArgs {
   data: string;
   fileName: string;
+  path: string;
   token: string;
 }
 
@@ -14,7 +14,7 @@ export default async function saveOnline(args: SaveOnlineArgs) {
     const signedPost = await getUploadUrl({
       token: args.token,
       fileName: args.fileName,
-      path: getDataType(),
+      path: args.path,
     });
 
     const url = signedPost.url;

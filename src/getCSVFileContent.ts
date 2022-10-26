@@ -1,8 +1,8 @@
 import Papa from 'papaparse';
-import { RowData, TokenizedFileInput } from '../../../definitions/custom';
-import { getTextFileContent } from './queries.utils';
+import { RowData, TokenizedFileInput } from './definitions/custom';
+import { getTextFileContent } from './utils/queries.utils';
 
-export default async function getFileContent(args: TokenizedFileInput) {
+export default async function getCSVFileContent(args: TokenizedFileInput) {
   try {
     const rawTextContent = await getTextFileContent(args);
     const parsedData: RowData[] = [];

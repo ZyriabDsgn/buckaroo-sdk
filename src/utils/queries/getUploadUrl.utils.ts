@@ -1,6 +1,6 @@
-import checkFetch from '../../checkFetch.utils';
-import { getUploadUrlQuery } from '../../../helpers/gqlQueries.helper';
-import { SignedPost } from '../../../../definitions/graphql';
+import checkFetch from '../checkFetch.utils';
+import { getUploadUrlQuery } from '../helpers/gqlQueries.helper';
+import { SignedPost } from '../../definitions/custom';
 
 interface getUploadUrlArgs {
   token: string;
