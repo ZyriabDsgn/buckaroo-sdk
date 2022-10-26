@@ -1,4 +1,8 @@
 # Buckaroo SDK
+![GitHub package.json version](https://img.shields.io/github/package-json/v/ZyriabDsgn/buckaroo-sdk)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ZyriabDsgn/buckaroo-sdk)
+[![GitHub license](https://img.shields.io/github/license/ZyriabDsgn/buckaroo-sdk)](https://github.com/ZyriabDsgn/buckaroo-sdk)
+
 
 Connect your frontend to your (Buckaroo) backend easily.
 
@@ -93,7 +97,7 @@ async function foo() {
 
 ## Contributing
 
-This project (with Buckaroo) has a long way to go, feel free to send a PR, this is a small side project and if you spot any error in the code or README, I would appreciate your help 🙂
+This project (with Buckaroo) has a long way to go, feel free to send a PR, this is a small side project and if you want to add a feature, spot any error in the code or README, I would appreciate your help 🙂
 
 ## License
 
