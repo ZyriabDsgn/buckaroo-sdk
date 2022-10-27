@@ -1,7 +1,7 @@
 # Buckaroo SDK
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ZyriabDsgn/buckaroo-sdk)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ZyriabDsgn/buckaroo-sdk)
-[![GitHub license](https://img.shields.io/github/license/ZyriabDsgn/buckaroo-sdk)](https://github.com/ZyriabDsgn/buckaroo-sdk)
+![GitHub license](https://img.shields.io/github/license/ZyriabDsgn/buckaroo-sdk)
 
 
 Connect your frontend to your (Buckaroo) backend easily.
@@ -14,7 +14,7 @@ For example, you can put the files in `your_project/src/utils/buckaroo/`.
 You also need a token based authentication (JWT) in order to pass a token to the backend.
 
 Lastly, install the SDK dependencies with the following commands:  
-`npm install typescript papaparse cross-fetch normalize-path`  
+`npm install typescript papaparse normalize-path`  
 `npm install -D @types/papaparse @types/normalize-path @types/node dotenv`
 
 I recommend you check out [Buckaroo](https://www.github.com/ZyriabDsgn/Buckaroo) to have the necessary info about the environment variables, auth, etc.
