@@ -8,7 +8,7 @@ Connect your frontend to your (Buckaroo) backend easily.
 
 ## Installation
 
-Until a NPM package is made available, you need to download this repo's content and include it in your frontend folders (you can ommit the packages*.json).  
+Until a NPM package is made available, you need to download this repo's content and include the files inside the `src` folder in your frontend folders.  
 For example, you can put the files in `your_project/src/utils/buckaroo/`.
 
 You also need a token based authentication (JWT) in order to pass a token to the backend.
